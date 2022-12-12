@@ -1,0 +1,98 @@
+$black: rgba(0, 0, 0, 1);
+$gray: rgba(100, 100, 100, 1);
+$white: rgba(255, 255, 255, 1);
+$off-white: rgba(250, 250, 250, 1);
+$lightred: #ff4f4b;
+$orange: #FFA400;
+$blue: dodgerblue;
+$darkblue: #0047AB;
+
+body{
+    background-color: $off-white;
+    color: $black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.number-guesser-app{
+    box-sizing: border-box;
+    margin: 0rem auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, auto);
+    text-align: center;
+
+    button{
+        background-color: $blue;
+        color: $white;
+        border: 0rem;
+        border-radius: 5rem;
+        padding: 1rem;
+        outline: 0rem;
+        cursor: pointer;
+
+        &:hover, &:active, &:focus{
+            background-color: $darkblue;
+        }
+    }
+
+    .tagline{
+        color: $gray;
+        font-style: italic;
+    }
+
+
+    .guess-area{
+        margin: 2rem 0rem;
+    }
+
+    .emoji{
+        font-size: 3rem;
+        margin: 2rem auto 1rem auto;
+    }
+
+    .message{
+        font-size: 2rem;
+    }
+
+    .total-guesses{
+        color: $gray;
+        margin: 1rem auto;
+        font-style: italic;
+    }
+
+    .response{
+        span{
+            display: block;
+        }
+    }
+
+    ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0rem;
+        
+        li{
+            width: max-content;
+            border-radius: 5rem;
+            padding: .5rem 1rem;
+
+            &.high{
+                background-color: $lightred;
+            }
+
+            &.low{
+                background-color: $blue;
+            }
+
+            &.winner{
+                background-color: $orange;
+            }
+        }
+    }
+
+    
+}
