@@ -1,9 +1,78 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bran McMillin</title>
+    <style>
+        html{
+            height: -webkit-fill-available;
+        }
+        body{
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            color: white;
+            margin: 0rem auto;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (prefers-color-scheme: dark) {
+            body{
+                background: rgba(20, 20, 20, 1);
+                color: white;
+            }
+        }
+        h1{
+            margin: 0rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0rem;
+            padding: 0rem;
+        }
+        li{
+            margin: 1rem 0rem;
+            padding: 0rem .5rem;
+        }
+        .profile-image{
+            margin: 0rem 0rem 1rem 0rem;
+        }
+        .profile-image img{
+            max-width: 10rem;
+            border-radius: 50%;
+        }
+        .copyright{
+            color: gray;
+            font-size: .75rem;
+            font-style: italic;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
 <body>
-  <h1>Bran McMillin</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <div class="content-wrapper">
+        <div class="profile-image"><img src="./bran-mcmillin.jpg" alt="Bran McMillin"/></div>
+        <h1>Bran McMillin</h1>
+        <h2>Front-End Developer</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/branmcmillin">LinkedIn</a></li>
+            <li><a href="https://github.com/branmcmillin">GitHub</a></li>
+        </ul>
+        <p class="copyright">&copy; <span class="copyrightDate"></span> Bran McMillin. All rights reserved.</p>
+    </div>
+    <script>
+        let copy = document.getElementsByClassName("copyrightDate")[0],
+            date = new Date().getFullYear();
+        copy.innerHTML = `${date}`;
+    </script>
 </body>
- 
 </html>
